@@ -15,16 +15,34 @@ Eğer aradığın soruların cevapları GitHub docs'ta yoksa, Google'lama beceri
 
 1. Git nedir?
 
+Açık kodlu yazılımların düzenlenmesi veya geliştirilmesi sürecinde yapılan değişikliklerin ve tüm versiyonların kaydedildiği, kronolojik olarak hem merkezi bir sunucuda hem de yazılımcının kendi bilgisayarında depolamasını sağlayan bir sistemdir.
+
 2. Git ile GitHub arasında ne fark var?
+
+Github, git depolama hizmeti sağlayan bir şirkettir. 
 
 3. Neden bir branch oluşturuyoruz?
 
+Yazılan kod üzerinde kalıcı bir değişiklik yapmak yerine yeni bir branchte bu değişiklikleri yapıp emin olduktan sonra ana branche bu düzenlemeler taşınabilir. Aynı anda birkaç kişinin aynı kod üzerinde çalışmasına imkan sağlayabilmek için. Ana amacı çalışan ilk kodu korumak.
+
 4. Pull Request'in amacı nedir?
+
+Değişiklik amacıyla aldığımız kodun tüm kopyalarıyla birlikte ana verisini değiştirmek için kullanırız.
 
 5. Bir Branchten diğerine geçmek için kullandığın KOMUT nedir? Mesela `isim-soyisim` branch'inde çalıştığını hayal et ve main branch'ine geçmek istiyorsun, ne yaparsın?
 
+$ git switch main
+
 6. `git fetch`, `git merge` ve `git pull` arasındaki farklıarı açıklayınız. Bu konutlar ne yapar açıklayınız.
+
+git fetch komutu farklı bir depolama alanından yerel depolama alanına kodu almamızı sağlar.
+git merge komutu mevcut kodumuzla 1 veya daha fazla kodu birleştirmek için kullanılır
+git pull fetch+merge olarak özetlenebilir, aldığımız kodu direkt olarak mevcut kodumuzla birleştirir.
 
 7. Merge conflict nedir?
 
+2 veya daha fazla kodu birleştirirken farklı kodlardaki aynı satırlarda değişiklik yapıldıysa veya birinde değişiklik yapılan satır diğerinde silindiyse oluşan bir hatadır. 
+
 8. Merge conflict'i nasıl çözeriz?
+
+oluşan conflicti anlamak için "status" ile öncelikle hangi dosyaların bu conflictten etkilendiğine bakarız. bu etkilenen dosyanın içinde hangi satır veya satırlarda problem olduğunu buluruz. yapılan değişikliklerden hangisinin kalacağına karar vererek gerekli düzenlemeyi yaparız. sonrasında dosyamızı açıklayıcı notumuzla birlikte yeniden yükleriz.
